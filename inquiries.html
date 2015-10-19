@@ -1,0 +1,562 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inquiries</title>
+    <link rel="stylesheet" href="libs/bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap-3.3.5-dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <script src="libs/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="libs/jquery-ui.js"></script>
+    <script src="libs/function.js"></script>
+</head>
+
+<body class="booking">
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <a href=""><img class="logo-booking" src="images/logo.png" alt="Logo"></a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="title-page">
+                    <h1>Inquiries</h1>
+                </div>
+                <form action="">
+                    <input type="hidden" id="xcl_sum" name="xcl_sum">
+                    <div class="col-xs-12 col-md-4 w50">
+                        <div class="row">
+                            <div class="inquiries">
+                                <div class="inquiries-head">
+                                    <h3>Plan your trip</h3>
+                                    <span></span>
+                                </div>
+                                <div class="InquireTabCover">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs">
+                                        <li role="presentation" class="active">
+                                            <a href="#flightContent" aria-controls="flightContent" role="tab" data-toggle="tab">
+                Flight
+            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#hotelContent" aria-controls="hotelContent" role="tab" data-toggle="tab">
+                Hotel
+            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content FlightContentOuter">
+                                        <div role="tabpanel" class="tab-pane active" id="flightContent">
+                                            <!-- Nav tabs -->
+                                            <ul class="nav nav-tabs">
+                                                <li role="presentation" class="active">
+                                                    <a href="#returnContent" aria-controls="returnContent" role="tab" data-toggle="tab">
+                        Return
+                    </a>
+                                                </li>
+                                                <li role="presentation">
+                                                    <a href="#onewayContent" aria-controls="onewayContent" role="tab" data-toggle="tab">
+                        One-way
+                    </a>
+                                                </li>
+                                                <li role="presentation">
+                                                    <a href="#multiContent" aria-controls="multiContent" role="tab" data-toggle="tab">
+                        Multi-stop
+                    </a>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab panes -->
+                                            <div class="tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="returnContent">
+                                                    <div class="inquiries-body">
+                                                        <div class="form-group">
+                                                            <label class="lbl-left" for="from">Leaving From</label>
+                                                            <input type="text" class="form-control city" id="from" placeholder="City or airport">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="lbl-left" for="to">Going To</label>
+                                                            <input type="text" class="form-control city" id="to" placeholder="City or airport">
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6 form-group">
+                                                                <p>Leaving From</p>
+                                                                <input type="text" class="BgXanh BgLich datepicker">
+                                                            </div>
+                                                            <div class="col-sm-6 form-group">
+                                                                <p>Returning on</p>
+                                                                <input type="text" class="BgXanh BgLich datepicker">
+                                                            </div>
+                                                            <!-- Book Person -->
+                                                            <div class="form-group col-sm-12 OuterDropSelect">
+                                                                <div class="NubmerAll BgXanh" id="numberAll">
+                                                                    <span class="TotalPeople xcl_sum_view">6</span> people
+                                                                    <span class="ArrPos glyphicon glyphicon-menu-down"></span>
+                                                                </div>
+                                                                <div class="DropSelect">
+                                                                    <div class="form-group">
+                                                                        <span class="LabelTextLeft">Adults <br>
+                                            <span class="small">(12+)</span>
+                                                                        </span>
+                                                                        <div class="travellers">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
+                                                                                <input type="text" value="6" readonly="readonly" name="adults" class="form-control num-adults xcl-itm">
+                                                                                <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- end travellers -->
+                                                                    </div>
+                                                                    <!-- end form-group -->
+                                                                    <div class="form-group">
+                                                                        <span class="LabelTextLeft">Children <br>
+                                            <span class="small">(2-11)</span>
+                                                                        </span>
+                                                                        <div class="travellers">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
+                                                                                <input type="text" value="6" readonly="readonly" name="children" class="form-control num-children xcl-itm">
+                                                                                <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- end travellers -->
+                                                                    </div>
+                                                                    <!-- end form-group -->
+                                                                    <div class="form-group">
+                                                                        <span class="LabelTextLeft">Infants <br>
+                                            <span class="small">(0-23m)</span>
+                                                                        </span>
+                                                                        <div class="travellers">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
+                                                                                <input type="text" value="6" readonly="readonly" name="infant" class="form-control num-infant xcl-itm">
+                                                                                <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- end travellers -->
+                                                                    </div>
+                                                                    <!-- end form-group -->
+                                                                </div>
+                                                                <!-- end DropSelect -->
+                                                            </div>
+                                                            <!-- end Outer DropSelect -->
+                                                            <div class="form-group col-sm-12">
+                                                                <label for="flexday">
+                                                                    <input type="checkbox" id="flexday" value="1" /> I'm flexible +/- 3 days
+                                                                    <span class="CheckBoxcheck"></span>
+                                                                </label>
+                                                            </div>
+                                                            <!-- end Book Person -->
+                                                        </div>
+                                                        <!-- end row -->
+                                                    </div>
+                                                    <!-- end  inquires body -->
+                                                </div>
+                                                <!-- end Tab returnContent -->
+                                                <div role="tabpanel" class="tab-pane" id="onewayContent">
+                                                    <div class="inquiries-body">
+                                                        <div class="form-group">
+                                                            <label class="lbl-left" for="from">Leaving From</label>
+                                                            <input type="text" class="form-control city" id="from" placeholder="City or airport">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="lbl-left" for="to">Going To</label>
+                                                            <input type="text" class="form-control city" id="to" placeholder="City or airport">
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6 form-group">
+                                                                <p>Leaving From</p>
+                                                                <input type="text" class="BgXanh BgLich datepicker">
+                                                            </div>
+                                                            <!-- Book Person -->
+                                                            <div class="form-group col-sm-12 OuterDropSelect">
+                                                                <div class="NubmerAll BgXanh" id="numberAll">
+                                                                    <span class="TotalPeople xcl_sum_view">6</span> people
+                                                                    <span class="ArrPos glyphicon glyphicon-menu-down"></span>
+                                                                </div>
+                                                                <div class="DropSelect">
+                                                                    <div class="form-group">
+                                                                        <span class="LabelTextLeft">Adults <br>
+                                            <span class="small">(12+)</span>
+                                                                        </span>
+                                                                        <div class="travellers">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
+                                                                                <input type="text" value="6" readonly="readonly" name="adults" class="form-control num-adults xcl-itm">
+                                                                                <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- end travellers -->
+                                                                    </div>
+                                                                    <!-- end form-group -->
+                                                                    <div class="form-group">
+                                                                        <span class="LabelTextLeft">Children <br>
+                                            <span class="small">(2-11)</span>
+                                                                        </span>
+                                                                        <div class="travellers">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
+                                                                                <input type="text" value="6" readonly="readonly" name="children" class="form-control num-children xcl-itm">
+                                                                                <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- end travellers -->
+                                                                    </div>
+                                                                    <!-- end form-group -->
+                                                                    <div class="form-group">
+                                                                        <span class="LabelTextLeft">Infants <br>
+                                            <span class="small">(0-23m)</span>
+                                                                        </span>
+                                                                        <div class="travellers">
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
+                                                                                <input type="text" value="6" readonly="readonly" name="infant" class="form-control num-infant xcl-itm">
+                                                                                <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- end travellers -->
+                                                                    </div>
+                                                                    <!-- end form-group -->
+                                                                </div>
+                                                                <!-- end DropSelect -->
+                                                            </div>
+                                                            <!-- end Outer DropSelect -->
+                                                            <div class="form-group col-sm-12">
+                                                                <label for="flexday">
+                                                                    <input type="checkbox" id="flexday" value="1" /> I'm flexible +/- 3 days
+                                                                    <span class="CheckBoxcheck"></span>
+                                                                </label>
+                                                            </div>
+                                                            <!-- end Book Person -->
+                                                        </div>
+                                                        <!-- end row -->
+                                                    </div>
+                                                    <!-- end  inquires body -->
+                                                </div>
+                                                <!-- end tab Content OneWay -->
+                                                <div role="tabpanel" class="tab-pane" id="multiContent">
+                                                    <div class="inquiries-body">
+                                                        <h4 class="FlightNumber">
+                            <span class="TitleFlight">Flight 1 :</span>
+                            <span class="BorderBottom"> </span>
+                        </h4>
+                                                        <div class="form-group">
+                                                            <label class="lbl-left" for="from">Leaving From</label>
+                                                            <input type="text" class="form-control city" id="from" placeholder="City or airport">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="lbl-left" for="to">Going To</label>
+                                                            <input type="text" class="form-control city" id="to" placeholder="City or airport">
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6 form-group">
+                                                                <p>Leave</p>
+                                                                <input type="text" class="BgXanh BgLich datepicker">
+                                                            </div>
+                                                            <div class="col-sm-6 form-group">
+                                                                <p>&nbsp;</p>
+                                                                <div class="select-div">
+                                                                    <select id="" name="">
+                                                                        <option value="1">Anytime</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end row -->
+                                                        <h4 class="FlightNumber">
+                            <span class="TitleFlight">Flight 2 :</span>
+                            <span class="BorderBottom"> </span>
+                        </h4>
+                                                        <div class="form-group">
+                                                            <label class="lbl-left" for="from">Leaving from</label>
+                                                            <input type="text" class="form-control city" id="from" placeholder="City or airport">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="lbl-left" for="to">Going To</label>
+                                                            <input type="text" class="form-control city" id="to" placeholder="City or airport">
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6 form-group">
+                                                                <p>Leave</p>
+                                                                <input type="text" class="BgXanh BgLich datepicker">
+                                                            </div>
+                                                            <div class="col-sm-6 form-group">
+                                                                <p>&nbsp;</p>
+                                                                <div class="select-div">
+                                                                    <select id="" name="">
+                                                                        <option value="1">Anytime</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end row -->
+                                                        <a href="" class="IconAddMore">Add another flight</a>
+                                                        <div class="quantity">
+                                                            <div class="form-group">
+                                                                <label for="from">
+                                                                    Adults
+                                                                    <br> (18-64)
+                                                                </label>
+                                                                <div class="select-div">
+                                                                    <select name="" id="">
+                                                                        <option value="1">1</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="to">
+                                                                    Seniors
+                                                                    <br> (65 +)
+                                                                </label>
+                                                                <div class="select-div">
+                                                                    <select name="" id="">
+                                                                        <option value="1">1</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="from">
+                                                                    Children
+                                                                    <br> (0-17)
+                                                                </label>
+                                                                <div class="select-div">
+                                                                    <select name="" id="">
+                                                                        <option value="1">0</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group last">
+                                                                <a href="" class="AgeCate">Age Categories</a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end quantity -->
+                                                        <div class="row">
+                                                            <div class="form-group col-sm-12">
+                                                                <label for="flexday">
+                                                                    <input type="checkbox" id="prefer" value="1" /> Prefer non stop
+                                                                    <span class="CheckBoxcheck"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end  inquires body -->
+                                                </div>
+                                            </div>
+                                            <!-- end tab-content -->
+                                        </div>
+                                        <!-- end flightContent -->
+                                        <div role="tabpanel" class="tab-pane" id="hotelContent">
+                                            <div class="inquiries-body">
+                                                <div class="form-group">
+                                                    <label class="lbl-left" for="to">Where</label>
+                                                    <input type="text" class="form-control city" id="to" placeholder="City or airport">
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-5 form-group">
+                                                        <p>Check in</p>
+                                                        <input type="text" class="BgXanh BgLich datepicker">
+                                                    </div>
+                                                    <div class="col-sm-5 form-group">
+                                                        <p>Check out</p>
+                                                        <input type="text" class="BgXanh BgLich datepicker">
+                                                    </div>
+                                                    <div class="col-sm-2 form-group">
+                                                        <p>Night</p>
+                                                        <span class="NumberNight">1</span>
+                                                    </div>
+                                                    <div class="quantity">
+                                                        <div class="col-xs-3">
+                                                            Room 1
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="from">
+                                                                Adults
+                                                                <br>
+                                                            </label>
+                                                            <div class="select-div">
+                                                                <select name="" id="">
+                                                                    <option value="1">1</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                            <a href="" class="TextGreen">Add a room</a>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="to">
+                                                                Seniors
+                                                                <br>
+                                                            </label>
+                                                            <div class="select-div">
+                                                                <select name="" id="">
+                                                                    <option value="1">1</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end quantity -->
+                                                    <div class="clearfix"></div>
+                                                    <div class="form-group col-xs-12">
+                                                        <p>Star rating</p>
+                                                        <div class="SelectBg">
+                                                            <span class="arrow-up Customarr1"></span>
+                                                            <select id="" name="">
+                                                                <option value="">Chọn khu vực</option>
+                                                                <option value="">An Giang</option>
+                                                                <option value="">Bà Rịa - Vũng Tàu</option>
+                                                                <option value="">Bắc Cạn</option>
+                                                                <option value="">Bắc Giang</option>
+                                                                <option value="">Bạc Liêu</option>
+                                                                <option value="">Bắc Ninh</option>
+                                                                <option value="">Bến Tre</option>
+                                                                <option value="">Bình Dương</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-xs-12">
+                                                        <p>Additional option</p>
+                                                        <label class="lbl-left" for="to">Hotel name</label>
+                                                        <input type="text" class="form-control city">
+                                                    </div>
+                                                    <div class="form-group col-xs-12">
+                                                        <p>I have a promotion code</p>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <!-- end row -->
+                                            </div>
+                                            <!-- end  inquires body -->
+                                        </div>
+                                        <!-- end hotelContent -->
+                                    </div>
+                                </div>
+                                <!-- end InquireTab -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 w50">
+                        <div class="row">
+                            <div class="inquiries second">
+                                <div class="inquiries-head">
+                                    <h3>Choose your references</h3>
+                                    <span></span>
+                                </div>
+                                <div class="inquiries-body">
+                                    <div class="BlockSelect">
+                                        <div class="select-div">
+                                            <select name="" id="">
+                                                <option value="1">Select cabin/class</option>
+                                            </select>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="radio">
+                                            <label class="LabelActive">
+                                                <input type="radio" name="budget" value="Economy">
+                                                <span class="Radiocheck">Economy</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="LabelActive">
+                                                <input type="radio" name="budget" value="Premium Economy">
+                                                <span class="Radiocheck">Premium Economy</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="LabelActive">
+                                                <input type="radio" name="budget" value="Business">
+                                                <span class="Radiocheck">Business</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="LabelActive">
+                                                <input type="radio" name="budget" value="First">
+                                                <span class="Radiocheck">First</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- end BlockSelect -->
+                                    <div class="BlockSelect second">
+                                        <div class="select-div ">
+                                            <select name="" id="">
+                                                <option value="1">Depart</option>
+                                            </select>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="radio">
+                                            <label class="LabelActive">
+                                                <input type="radio" name="depart" value="Economy">
+                                                <span class="Radiocheck">Airport pick up</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="LabelActive">
+                                                <input type="radio" name="depart" value="Premium Economy">
+                                                <span class="Radiocheck">Travel Ensurence</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="LabelActive">
+                                                <input type="radio" name="depart" value="Business">
+                                                <span class="Radiocheck">Tour</span>
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label class="LabelActive">
+                                                <input type="radio" name="depart" value="First">
+                                                <span class="Radiocheck">Airport Lounge</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- end BlockSelect -->
+                                </div>
+                                <!-- end inquiries-body -->
+                            </div>
+                            <!-- end inquiries second -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <div class="col-xs-12 col-md-4 w50">
+                        <div class="row">
+                            <div class="inquiries third">
+                                <div class="inquiries-head">
+                                    <h3>Contact details</h3>
+                                    <span></span>
+                                </div>
+                                <div class="inquiries-body">
+                                    <div class="form-group">
+                                        <label class="lbl-left" for="email">Email *</label>
+                                        <input type="text" class="form-control city" id="email" placeholder="Enter your email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="lbl-left" for="phone">Phone</label>
+                                        <input type="text" class="form-control city" id="phone" placeholder="Enter your phone number">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="divide">
+                            <hr>
+                        </div>
+                        <div>
+                            <input type="submit" class="btn-smt" value="Submit" />
+                        </div>
+                        <div class="description">
+                            <p class="col-sm-4 col-sm-12">Further question?
+                                <br/>Contact us at:
+                                <br/><a href="mailto: info@uniqpartners.com.au">info@uniqpartners.com.au</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
