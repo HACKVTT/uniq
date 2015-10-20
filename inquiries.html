@@ -29,7 +29,6 @@
                     <h1>Inquiries</h1>
                 </div>
                 <form action="">
-                    <input type="hidden" id="xcl_sum" name="xcl_sum">
                     <div class="col-xs-12 col-md-4 w50">
                         <div class="row">
                             <div class="inquiries">
@@ -75,6 +74,8 @@
                                             <!-- Tab panes -->
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="returnContent">
+                                                    <input type="hidden" id="xcl_sum0" class="xcl_sum" name="xcl_sum0">
+
                                                     <div class="inquiries-body">
                                                         <div class="form-group">
                                                             <label class="lbl-left" for="from">Leaving From</label>
@@ -107,7 +108,7 @@
                                                                         <div class="travellers">
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
-                                                                                <input type="text" value="6" readonly="readonly" name="adults" class="form-control num-adults xcl-itm">
+                                                                                <input type="text" value="1" readonly="readonly" name="adults" class="form-control num-adults xcl-itm">
                                                                                 <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
                                                                             </div>
                                                                         </div>
@@ -121,7 +122,7 @@
                                                                         <div class="travellers">
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
-                                                                                <input type="text" value="6" readonly="readonly" name="children" class="form-control num-children xcl-itm">
+                                                                                <input type="text" value="0" readonly="readonly" name="children" class="form-control num-children xcl-itm">
                                                                                 <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
                                                                             </div>
                                                                         </div>
@@ -135,7 +136,7 @@
                                                                         <div class="travellers">
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
-                                                                                <input type="text" value="6" readonly="readonly" name="infant" class="form-control num-infant xcl-itm">
+                                                                                <input type="text" value="0" readonly="readonly" name="infant" class="form-control num-infant xcl-itm">
                                                                                 <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
                                                                             </div>
                                                                         </div>
@@ -147,8 +148,8 @@
                                                             </div>
                                                             <!-- end Outer DropSelect -->
                                                             <div class="form-group col-sm-12">
-                                                                <label for="flexday">
-                                                                    <input type="checkbox" id="flexday" value="1" /> I'm flexible +/- 3 days
+                                                                <label for="flexday1">
+                                                                    <input type="checkbox" id="flexday1" value="1" /> I'm flexible +/- 3 days
                                                                     <span class="CheckBoxcheck"></span>
                                                                 </label>
                                                             </div>
@@ -160,6 +161,7 @@
                                                 </div>
                                                 <!-- end Tab returnContent -->
                                                 <div role="tabpanel" class="tab-pane" id="onewayContent">
+                                                    <input type="hidden" id="xcl_sum1" class="xcl_sum" name="xcl_sum1">
                                                     <div class="inquiries-body">
                                                         <div class="form-group">
                                                             <label class="lbl-left" for="from">Leaving From</label>
@@ -176,7 +178,7 @@
                                                             </div>
                                                             <!-- Book Person -->
                                                             <div class="form-group col-sm-12 OuterDropSelect">
-                                                                <div class="NubmerAll BgXanh" id="numberAll">
+                                                                <div class="NubmerAll BgXanh" id="numberAll2">
                                                                     <span class="TotalPeople xcl_sum_view">6</span> people
                                                                     <span class="ArrPos glyphicon glyphicon-menu-down"></span>
                                                                 </div>
@@ -188,7 +190,7 @@
                                                                         <div class="travellers">
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
-                                                                                <input type="text" value="6" readonly="readonly" name="adults" class="form-control num-adults xcl-itm">
+                                                                                <input type="text" value="1" readonly="readonly" name="adults" class="form-control num-adults xcl-itm">
                                                                                 <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
                                                                             </div>
                                                                         </div>
@@ -202,7 +204,7 @@
                                                                         <div class="travellers">
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
-                                                                                <input type="text" value="6" readonly="readonly" name="children" class="form-control num-children xcl-itm">
+                                                                                <input type="text" value="0" readonly="readonly" name="children" class="form-control num-children xcl-itm">
                                                                                 <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
                                                                             </div>
                                                                         </div>
@@ -216,7 +218,7 @@
                                                                         <div class="travellers">
                                                                             <div class="input-group">
                                                                                 <span class="input-group-addon minus glyphicon glyphicon-minus"></span>
-                                                                                <input type="text" value="6" readonly="readonly" name="infant" class="form-control num-infant xcl-itm">
+                                                                                <input type="text" value="0" readonly="readonly" name="infant" class="form-control num-infant xcl-itm">
                                                                                 <span class="input-group-addon plus glyphicon glyphicon-plus"></span>
                                                                             </div>
                                                                         </div>
@@ -338,7 +340,7 @@
                                                         <!-- end quantity -->
                                                         <div class="row">
                                                             <div class="form-group col-sm-12">
-                                                                <label for="flexday">
+                                                                <label for="prefer">
                                                                     <input type="checkbox" id="prefer" value="1" /> Prefer non stop
                                                                     <span class="CheckBoxcheck"></span>
                                                                 </label>
