@@ -135,8 +135,13 @@ $(document).ready(function(){
     //======date Picker============//
     $( ".datepicker" ).datepicker();
 
+    $(".js_number_night").text(0);
     $(".datepicker").datepicker().on("change", function() {
+
         var number_night = getNumberDate();
+        if (isNaN(number_night)==true){
+            number_night =0;
+        }
         $(".js_number_night").text(number_night);
     });
 });

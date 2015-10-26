@@ -172,7 +172,8 @@ input[type="checkbox"]:checked + span.CheckBoxcheck { color: #1bc3e0; }
 
 .NumberNight { display: block; height: 40px; line-height: 40px; text-align: center; }
 
-.TextGreen { color: #46b251; font-size: 14px; text-decoration: underline; display: block; margin-top: 15px; }
+.TextGreen { color: #46b251; font-size: 14px; text-decoration: underline; display: block; }
+.TextGreen:hover { color: #fff; }
 
 .SelectBg { position: relative; background: #fff; color: #909090; }
 .SelectBg select { width: 100%; }

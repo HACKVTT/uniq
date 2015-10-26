@@ -40,14 +40,10 @@
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-tabs">
                                         <li role="presentation" class="active">
-                                            <a href="#flightContent" aria-controls="flightContent" role="tab" data-toggle="tab">
-                Flight
-            </a>
+                                            <a href="#flightContent" aria-controls="flightContent" role="tab" data-toggle="tab">Flight</a>
                                         </li>
                                         <li role="presentation">
-                                            <a href="#hotelContent" aria-controls="hotelContent" role="tab" data-toggle="tab">
-                Hotel
-            </a>
+                                            <a href="#hotelContent" aria-controls="hotelContent" role="tab" data-toggle="tab">Hotel</a>
                                         </li>
                                     </ul>
                                     <!-- Tab panes -->
@@ -56,19 +52,13 @@
                                             <!-- Nav tabs -->
                                             <ul class="nav nav-tabs">
                                                 <li role="presentation" class="active">
-                                                    <a href="#returnContent" aria-controls="returnContent" role="tab" data-toggle="tab">
-                        Return
-                    </a>
+                                                    <a href="#returnContent" aria-controls="returnContent" role="tab" data-toggle="tab">Return</a>
                                                 </li>
                                                 <li role="presentation">
-                                                    <a href="#onewayContent" aria-controls="onewayContent" role="tab" data-toggle="tab">
-                        One-way
-                    </a>
+                                                    <a href="#onewayContent" aria-controls="onewayContent" role="tab" data-toggle="tab">One-way</a>
                                                 </li>
                                                 <li role="presentation">
-                                                    <a href="#multiContent" aria-controls="multiContent" role="tab" data-toggle="tab">
-                        Multi-stop
-                    </a>
+                                                    <a href="#multiContent" aria-controls="multiContent" role="tab" data-toggle="tab">Multi-stop</a>
                                                 </li>
                                             </ul>
                                             <!-- Tab panes -->
@@ -362,16 +352,17 @@
                                                 <div class="row">
                                                     <div class="col-sm-5 form-group">
                                                         <p>Check in</p>
-                                                        <input type="text" class="BgXanh BgLich datepicker">
+                                                        <input type="text" class="BgXanh BgLich datepicker js_name_checkin" name="date_check_in">
                                                     </div>
                                                     <div class="col-sm-5 form-group">
                                                         <p>Check out</p>
-                                                        <input type="text" class="BgXanh BgLich datepicker">
+                                                        <input type="text" class="BgXanh BgLich datepicker js_name_checkout" name="date_check_out">
                                                     </div>
                                                     <div class="col-sm-2 form-group">
                                                         <p>Night</p>
-                                                        <span class="NumberNight">1</span>
+                                                        <span class="NumberNight js_number_night">1</span>
                                                     </div>
+
                                                     <div class="quantity">
                                                         <div class="col-xs-3">
                                                             Room 1
@@ -387,7 +378,7 @@
                                                                 </select>
                                                             </div>
                                                             <div class="clearfix"></div>
-                                                            <a href="" class="TextGreen">Add a room</a>
+                                                           
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="to">
@@ -400,8 +391,14 @@
                                                                 </select>
                                                             </div>
                                                         </div>
+                                                    </div> <!-- end quantity -->
+
+                                                    <div class="text-center col-xs-12">
+                                                        <a href="" class="TextGreen js_add_room">
+                                                            Add a room
+                                                        </a>
                                                     </div>
-                                                    <!-- end quantity -->
+
                                                     <div class="clearfix"></div>
                                                     <div class="form-group col-xs-12">
                                                         <p>Star rating</p>
