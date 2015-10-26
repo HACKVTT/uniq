@@ -118,15 +118,9 @@ $(document).ready(function(){
     });
   });
 
-
-    //======date Picker============//
-    $( ".datepicker" ).datepicker();
-
     //=========Book Adroom=========//
 
     var i = 1;
-
-
     $(".js_add_room").on("click", function(e) {
         e.preventDefault();
         i++;
@@ -137,15 +131,14 @@ $(document).ready(function(){
     });
 
 
-  $(".datepicker").datepicker().on("change", function() {
-     var number_night = getNumberDate();
-    $(".js_number_night").text(number_night);
-  });
 
+    //======date Picker============//
+    $( ".datepicker" ).datepicker();
 
-
-
-
+    $(".datepicker").datepicker().on("change", function() {
+        var number_night = getNumberDate();
+        $(".js_number_night").text(number_night);
+    });
 });
 
 
