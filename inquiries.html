@@ -234,61 +234,65 @@
                                                 <!-- end tab Content OneWay -->
                                                 <div role="tabpanel" class="tab-pane" id="multiContent">
                                                     <div class="inquiries-body">
-                                                        <h4 class="FlightNumber">
-                            <span class="TitleFlight">Flight 1 :</span>
-                            <span class="BorderBottom"> </span>
-                        </h4>
-                                                        <div class="form-group">
-                                                            <label class="lbl-left" for="from">Leaving From</label>
-                                                            <input type="text" class="form-control city" id="from" placeholder="City or airport">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="lbl-left" for="to">Going To</label>
-                                                            <input type="text" class="form-control city" id="to" placeholder="City or airport">
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-6 form-group">
-                                                                <p>Leave</p>
-                                                                <input type="text" class="BgXanh BgLich datepicker">
+                                                        <div class="coverflight">
+                                                            <h4 class="FlightNumber">
+                                                                <span class="TitleFlight">Flight 1 :</span>
+                                                                <span class="BorderBottom"> </span>
+                                                            </h4>
+                                                            <div class="form-group">
+                                                                <label class="lbl-left" for="from">Leaving From</label>
+                                                                <input type="text" class="form-control city" id="from" placeholder="City or airport">
                                                             </div>
-                                                            <div class="col-sm-6 form-group">
-                                                                <p>&nbsp;</p>
-                                                                <div class="select-div">
-                                                                    <select id="" name="">
-                                                                        <option value="1">Anytime</option>
-                                                                    </select>
+                                                            <div class="form-group">
+                                                                <label class="lbl-left" for="to">Going To</label>
+                                                                <input type="text" class="form-control city" id="to" placeholder="City or airport">
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-6 form-group">
+                                                                    <p>Leave</p>
+                                                                    <input type="text" class="BgXanh BgLich datepicker">
+                                                                </div>
+                                                                <div class="col-sm-6 form-group">
+                                                                    <p>&nbsp;</p>
+                                                                    <div class="select-div">
+                                                                        <select id="" name="">
+                                                                            <option value="1">Anytime</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                        <h4 class="FlightNumber">
-                            <span class="TitleFlight">Flight 2 :</span>
-                            <span class="BorderBottom"> </span>
-                        </h4>
-                                                        <div class="form-group">
-                                                            <label class="lbl-left" for="from">Leaving from</label>
-                                                            <input type="text" class="form-control city" id="from" placeholder="City or airport">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="lbl-left" for="to">Going To</label>
-                                                            <input type="text" class="form-control city" id="to" placeholder="City or airport">
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-6 form-group">
-                                                                <p>Leave</p>
-                                                                <input type="text" class="BgXanh BgLich datepicker">
+                                                        </div> <!-- end coverflight -->
+                                                        
+                                                        <div class="coverflight">
+                                                            <h4 class="FlightNumber">
+                                                                <span class="TitleFlight">Flight 2 :</span>
+                                                                <span class="BorderBottom"> </span>
+                                                            </h4>
+                                                            <div class="form-group">
+                                                                <label class="lbl-left" for="from">Leaving from</label>
+                                                                <input type="text" class="form-control city" id="from" placeholder="City or airport">
                                                             </div>
-                                                            <div class="col-sm-6 form-group">
-                                                                <p>&nbsp;</p>
-                                                                <div class="select-div">
-                                                                    <select id="" name="">
-                                                                        <option value="1">Anytime</option>
-                                                                    </select>
+                                                            <div class="form-group">
+                                                                <label class="lbl-left" for="to">Going To</label>
+                                                                <input type="text" class="form-control city" id="to" placeholder="City or airport">
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-6 form-group">
+                                                                    <p>Leave</p>
+                                                                    <input type="text" class="BgXanh BgLich datepicker">
+                                                                </div>
+                                                                <div class="col-sm-6 form-group">
+                                                                    <p>&nbsp;</p>
+                                                                    <div class="select-div">
+                                                                        <select id="" name="">
+                                                                            <option value="1">Anytime</option>
+                                                                        </select>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <!-- end row -->
-                                                        <a href="" class="IconAddMore">Add another flight</a>
+                                                        </div><!-- end coverflight -->
+                                  
+                                                        <a href="" class="IconAddMore js_add_flight">Add another flight</a>
                                                         <div class="quantity">
                                                             <div class="form-group">
                                                                 <label for="from">
@@ -556,6 +560,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
