@@ -5,10 +5,12 @@
 		<title>Home</title>
 		<link rel="stylesheet" href="libs/bootstrap-3.3.5-dist/css/bootstrap.css">
 		<link rel="stylesheet" href="libs/bootstrap-3.3.5-dist/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="libs/jquery-1.11.3.min.js"></script>
 		<script src="libs/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-		<script type="text/javascript">
+		<script src="libs/jquery-ui.js"></script>
+		<script src="libs/function.js" type="text/javascript">
 			// $(document).ready(function(){
 			// 	$("#scrollTop").on("click", function(e){
 			// 		e.preventDefault();
@@ -23,38 +25,42 @@
 		</script>	
 	</head>
 	<body>
-		<div class="home">
-			<div class="header">
-				<div class="container">
-					<div class="row">
-						<a href="" class="logo-header"><img src="images/logo.png" alt="Logo"></a>
-					</div>
-				</div>
-			</div>
-			<div class="content" class="clearfix">
-				<div class="container">
-					<div class="row">
-						<p style="text-align: center;">
-							<a href=""><img class="logo-home" src="images/logo-home.png" alt="Logo"></a>
-						</p>
-						
-						<div class="divide"><hr></div>
-
-						<div class="whatwedo"><a href="">What we do</a></div>
-
-						<div class="description">
-							<p class="col-sm-4 col-sm-12">Onectinvel int, quiande vel intotatem fugiandit et incid mint et iliqui dolor samendistlnctemqu iandit as re enducia volumquaest. totate ecceari</p>
+		<div class="home" id="loadcontent">
+			<div id="Home">
+				<div class="header-home">
+					<div class="container">
+						<div class="row">
+							<a href="#" class="logo-header"><img src="images/logo.png" alt="Logo"></a>
 						</div>
-
-						<a id="scrollTop" class="icon-bottom description" href=""></a>
-		                <div class="description">                
-		                    <p>
-		                        Address:  5 Robinson Street - Moonee Ponds Vic 3030  |  Tel:  0401 352 555  |  ABN: 8960 3425 476
-		                    </p>           
-		                </div>	<!-- end description -->					
 					</div>
 				</div>
+				<div class="content" class="clearfix">
+					<div class="container">
+						<div class="row">
+							<p style="text-align: center;">
+								<a href=""><img class="logo-home" src="images/logo-home.png" alt="Logo"></a>
+							</p>
+							
+							<div class="divide"><hr></div>
+
+							<div class="whatwedo"><a class="js_whatwedo" href="http://localhost/uniq/aboutus.html" title="about us">What we do</a></div>
+
+							<div class="description">
+								<p class="col-sm-4 col-sm-12">Onectinvel int, quiande vel intotatem fugiandit et incid mint et iliqui dolor samendistlnctemqu iandit as re enducia volumquaest. totate ecceari</p>
+							</div>
+
+							<a id="scrollTop" class="icon-bottom description js_load_inquire" title="Inquiry" href="inquiries.html"></a>
+			                <div class="description">                
+			                    <p>
+			                        Address:  5 Robinson Street - Moonee Ponds Vic 3030  |  Tel:  0401 352 555  |  ABN: 8960 3425 476
+			                    </p>           
+			                </div>	<!-- end description -->					
+						</div> <!-- end row -->
+					</div> <!-- end container -->
+				</div> <!-- end content -->
 			</div>
-		</div>
+		</div><!-- end home -->
+
+		<div id="loading">Loading...</div>
 	</body>
 </html>
