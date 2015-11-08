@@ -31,15 +31,8 @@ function loadPage(urlreq, id, ctn, ttl)
             ctn.fadeIn();
             $('#loading').hide();
 
-            window.history.pushState(
-            {
-                "html":'',
-                "pageTitle":ttl
-            },
-            "",
-            urlreq
-            );
-            
+            window.history.pushState({"html":'', "pageTitle":ttl}, "", urlreq);
+
             //=======================================================
             // Link ajax
             //=======================================================
@@ -160,7 +153,7 @@ function loadPage(urlreq, id, ctn, ttl)
               "Scala",
               "Scheme"
             ];
-            $( "#to, #from" ).autocomplete({
+            $(".js_to_1, .js_to_2, .js_from_1, .js_from_2, .js_return_from, .js_return_to, .js_oneway_from, .js_oneway_to, #from, #to").autocomplete({
               source: availableTags
             });
           });
@@ -197,36 +190,32 @@ function loadPage(urlreq, id, ctn, ttl)
 
             var num_flight = 2;
 
-                $(".js_add_flight").on("click",function (e) {
-                    e.preventDefault();
+            $(".js_add_flight").on("click",function (e) {
+                e.preventDefault();
 
-                    ++num_flight;
+                ++num_flight;
 
-                    var html_flight = "";
-                        html_flight += '<div class="coverflight">';
-                        
-                        html_flight += '<h4 class="FlightNumber"><span class="TitleFlight">Flight '+num_flight+' :</span><span class="BorderBottom"> </span></h4>';
-
-                        html_flight += '<div class="form-group"><label class="lbl-left" for="from">Leaving from</label><input type="text" class="form-control city js_from" placeholder="City or airport"></div>';
-
-                        html_flight += '<div class="form-group"><label class="lbl-left" for="to">Going To</label><input type="text" class="form-control city js_to" placeholder="City or airport"></div>';
-
-                        html_flight += '<div class="row"><div class="col-sm-6 form-group"><p>Leave</p><input type="text" class="BgXanh BgLich datepicker"></div><div class="col-sm-6 form-group"><p>&nbsp;</p><div class="select-div"><select id="" name=""><option value="1">Anytime</option></select></div></div></div>';
-                        html_flight +="</div>";
-
+                var html_flight = "";
+                    html_flight += '<div class="coverflight">';
                     
+                    html_flight += '<h4 class="FlightNumber"><span class="TitleFlight">Flight '+num_flight+' :</span><span class="BorderBottom"> </span></h4>';
 
-                    $(this).prev(".coverflight").after(html_flight);
+                    html_flight += '<div class="form-group"><label class="lbl-left" for="from">Leaving from</label><input type="text" class="form-control city js_from_'+ num_flight +'" placeholder="City or airport"></div>';
 
-                    $( ".datepicker" ).datepicker();
+                    html_flight += '<div class="form-group"><label class="lbl-left" for="to">Going To</label><input type="text" class="form-control city js_to_'+ num_flight +'" placeholder="City or airport"></div>';
 
-                    $( ".js_from, .js_to" ).autocomplete({
-                      source: availableTags
-                    });
+                    html_flight += '<div class="row"><div class="col-sm-6 form-group"><p>Leave</p><input type="text" class="BgXanh BgLich datepicker"></div><div class="col-sm-6 form-group"><p>&nbsp;</p><div class="select-div"><select id="" name=""><option value="1">Anytime</option></select></div></div></div>';
+                    html_flight +="</div>";
+
+                
+
+                $(this).prev(".coverflight").after(html_flight);
+                $( ".datepicker" ).datepicker();
+
+                $( '.js_from_'+ num_flight +', .js_to_' + num_flight +'' ).autocomplete({
+                    source: availableTags
                 });
-
-        
-
+            });
         }, 
         error : function() {
 
@@ -360,7 +349,7 @@ $(document).ready(function() {
       "Scala",
       "Scheme"
     ];
-    $( "#to, #from" ).autocomplete({
+    $(".js_to_1, .js_to_2, .js_from_1, .js_from_2, .js_return_from, .js_return_to, .js_oneway_from, .js_oneway_to, #from, #to" ).autocomplete({
       source: availableTags
     });
   });
@@ -407,9 +396,9 @@ $(document).ready(function() {
                 
                 html_flight += '<h4 class="FlightNumber"><span class="TitleFlight">Flight '+num_flight+' :</span><span class="BorderBottom"> </span></h4>';
 
-                html_flight += '<div class="form-group"><label class="lbl-left" for="from">Leaving from</label><input type="text" class="form-control city js_from" placeholder="City or airport"></div>';
+                html_flight += '<div class="form-group"><label class="lbl-left" for="from">Leaving from</label><input type="text" class="form-control city js_from_'+ num_flight +'" placeholder="City or airport"></div>';
 
-                html_flight += '<div class="form-group"><label class="lbl-left" for="to">Going To</label><input type="text" class="form-control city js_to" placeholder="City or airport"></div>';
+                html_flight += '<div class="form-group"><label class="lbl-left" for="to">Going To</label><input type="text" class="form-control city js_to_'+ num_flight +'" placeholder="City or airport"></div>';
 
                 html_flight += '<div class="row"><div class="col-sm-6 form-group"><p>Leave</p><input type="text" class="BgXanh BgLich datepicker"></div><div class="col-sm-6 form-group"><p>&nbsp;</p><div class="select-div"><select id="" name=""><option value="1">Anytime</option></select></div></div></div>';
                 html_flight +="</div>";
@@ -417,11 +406,10 @@ $(document).ready(function() {
             
 
             $(this).prev(".coverflight").after(html_flight);
-
             $( ".datepicker" ).datepicker();
 
-            $( ".js_from, .js_to" ).autocomplete({
-              source: availableTags
+            $( '.js_from_'+ num_flight +', .js_to_' + num_flight +'' ).autocomplete({
+                source: availableTags
             });
         });
 });
