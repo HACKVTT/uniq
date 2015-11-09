@@ -200,9 +200,9 @@ function loadPage(urlreq, id, ctn, ttl)
                     
                     html_flight += '<h4 class="FlightNumber"><span class="TitleFlight">Flight '+num_flight+' :</span><span class="BorderBottom"> </span></h4>';
 
-                    html_flight += '<div class="form-group"><label class="lbl-left" for="from">Leaving from</label><input type="text" class="form-control city js_from_'+ num_flight +'" placeholder="City or airport"></div>';
+                    html_flight += '<div class="form-group"><label class="lbl-left" for="from">Leaving from</label><input type="text" name="name_from_'+ num_flight +'" class="form-control city js_from_'+ num_flight +'" placeholder="City or airport"></div>';
 
-                    html_flight += '<div class="form-group"><label class="lbl-left" for="to">Going To</label><input type="text" class="form-control city js_to_'+ num_flight +'" placeholder="City or airport"></div>';
+                    html_flight += '<div class="form-group"><label class="lbl-left" for="to">Going To</label><input type="text" name="name_to_'+ num_flight +'" class="form-control city js_to_'+ num_flight +'" placeholder="City or airport"></div>';
 
                     html_flight += '<div class="row"><div class="col-sm-6 form-group"><p>Leave</p><input type="text" class="BgXanh BgLich datepicker"></div><div class="col-sm-6 form-group"><p>&nbsp;</p><div class="select-div"><select id="" name=""><option value="1">Anytime</option></select></div></div></div>';
                     html_flight +="</div>";
@@ -396,9 +396,9 @@ $(document).ready(function() {
                 
                 html_flight += '<h4 class="FlightNumber"><span class="TitleFlight">Flight '+num_flight+' :</span><span class="BorderBottom"> </span></h4>';
 
-                html_flight += '<div class="form-group"><label class="lbl-left" for="from">Leaving from</label><input type="text" class="form-control city js_from_'+ num_flight +'" placeholder="City or airport"></div>';
+                html_flight += '<div class="form-group"><label class="lbl-left" for="from">Leaving from</label><input type="text" name="name_from_'+ num_flight +'" class="form-control city js_from_'+ num_flight +'" placeholder="City or airport"></div>';
 
-                html_flight += '<div class="form-group"><label class="lbl-left" for="to">Going To</label><input type="text" class="form-control city js_to_'+ num_flight +'" placeholder="City or airport"></div>';
+                html_flight += '<div class="form-group"><label class="lbl-left" for="to">Going To</label><input type="text" name="name_to_'+ num_flight +'" class="form-control city js_to_'+ num_flight +'" placeholder="City or airport"></div>';
 
                 html_flight += '<div class="row"><div class="col-sm-6 form-group"><p>Leave</p><input type="text" class="BgXanh BgLich datepicker"></div><div class="col-sm-6 form-group"><p>&nbsp;</p><div class="select-div"><select id="" name=""><option value="1">Anytime</option></select></div></div></div>';
                 html_flight +="</div>";
